@@ -30,25 +30,48 @@ const textContents = [
     "Cheers to you and your joy!"
 ];
 
-function showNextText() {
-    if (currentTextIndex < textContents.length) {
-        changingText.textContent = textContents[currentTextIndex];
-        textBox.classList.remove('hidden'); // Show the box
-        currentTextIndex++;
+const catBox = document.getElementById('cat-box');
+const repoBox = document.getElementById('repo-box');
+const catQuestion = document.getElementById('cat-question'); // Get the question element
+const yesButton = document.getElementById('yes-button');
+const noButton = document.getElementById('no-button');
 
-        setTimeout(() => {
-            textBox.classList.add('hidden'); // Hide after 3 seconds
-            if (currentTextIndex < textContents.length) { // Show next text if available
-                setTimeout(showNextText, 500); // Delay before showing the next text
-            }
-        }, 3000);
+function showNextText() {
+  if (currentTextIndex < textContents.length) {
+    changingText.textContent = textContents[currentTextIndex];
+    textBox.classList.remove('hidden'); // Show the box
+    currentTextIndex++;
+
+    setTimeout(() => {
+        textBox.classList.add('hidden'); // Hide after 3 seconds
+
+        if (currentTextIndex < textContents.length) { // Show next text if available
+            setTimeout(showNextText, 500); // Delay before showing the next text
+        } else {
+            // All texts shown, show cat box
+            setTimeout(() => { // Delay before showing cat box
+                catBox.classList.remove('hidden');
+            }, 500); // Small delay to allow fade-out
+        }
+
+    }, 3000);
 
     } else {
-        // All texts shown, you can add any final actions here if you want
-        // For example, you could reset currentTextIndex to 0 to loop again
-        // or leave it as is to have nothing more happen.
+      textBox.classList.add('hidden');
+      catBox.classList.remove('hidden');
     }
 }
+
+yesButton.addEventListener('click', () => {
+  // Redirect to another page
+  window.location.href = "newpage.html"; // Replace with your desired URL
+});
+
+noButton.addEventListener('click', () => {
+  // Show the repo box
+  catBox.classList.add('hidden');
+  repoBox.classList.remove('hidden');
+});
 
 // Start showing the first text
 showNextText();

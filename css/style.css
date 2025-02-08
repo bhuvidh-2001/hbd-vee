@@ -71,3 +71,58 @@ body {
     font-size: 1.2em; /* Adjust font size as needed */
     color: #800080; /* Example: Dark purple text color */
 }
+
+#cat-box {
+    width: 400px; /* Larger width for cat box */
+    height: 400px; /* Larger height for cat box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-image {
+    max-width: 90%; /* Cat image should not exceed box width */
+    max-height: 70%; /* Cat image should not exceed box height */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Add rounded corners to the cat image */
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+}
+
+#yes-button, #no-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+#yes-button {
+    background-color: #90EE90; /* Light Green */
+    color: #006400; /* Dark Green */
+}
+
+#no-button {
+    background-color: #FFC0CB; /* Light Pink */
+    color: #800000; /* Maroon */
+}
+
+#cat-question { /* Style for the question text */
+    margin-bottom: 20px;
+}
+
+#repo-box {
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+#repo-box a {
+    color: blue;
+    text-decoration: underline;
+}
