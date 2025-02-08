@@ -40,3 +40,34 @@ body {
         opacity: 0;
     }
 }
+
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fcdfe4; /* Light Pink */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Center text within the box */
+    z-index: 2; /* Ensure it's above the hearts */
+    opacity: 1; /* Initially visible */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+    width: 400px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}.center-box.hidden {
+    opacity: 0; /* Hidden state */
+}.sun-image {
+    width: 50px; /* Adjust sun image size */
+    height: 50px;
+}
+
+#changing-text {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-size: 1.2em; /* Adjust font size as needed */
+    color: #800080; /* Example: Dark purple text color */
+}
