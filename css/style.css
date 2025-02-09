@@ -84,8 +84,6 @@ body {
 .cat-image {
     max-width: 90%; /* Cat image should not exceed box width */
     max-height: 70%; /* Cat image should not exceed box height */
-    margin-bottom: 20px;
-    border-radius: 10px; /* Add rounded corners to the cat image */
 }
 
 .button-group {
