@@ -64,7 +64,7 @@ function showNextText() {
 
 yesButton.addEventListener('click', () => {
   // Redirect to another page
-  window.location.href = "newpage.html"; // Replace with your desired URL
+  window.location.href = "main.html"; // Replace with your desired URL
 });
 
 noButton.addEventListener('click', () => {
