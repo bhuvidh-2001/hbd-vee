@@ -4,7 +4,15 @@
   <meta charset="UTF-8">
   <title>Happy Birthday Bellatrix!</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'><link rel="stylesheet" href="css/style_main.css">
-
+  <style>
+  #draggableDiv {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    position: absolute;
+    cursor: move;
+}
+</style>
 </head>
 <body>
 <div class="paper heart">
@@ -34,7 +42,22 @@
 <div class="paper">
 <p class="p1">Text 1</p>
 </div>
-  <script  src="js/script_main.js"></script>
+<script>
+  function loadScript(src) {
+      const script = document.createElement('script');
+      script.src = src;
+      document.head.appendChild(script);
+  }
 
+  function isMobileDevice() {
+      return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  }
+
+  if (isMobileDevice()) {
+      loadScript("js/mobile.js");
+  } else {
+      loadScript("js/script_main.js");
+  }
+</script>
 </body>
 </html>

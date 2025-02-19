@@ -20,8 +20,8 @@ body {
 
 .heart {
     position: absolute;
-    width: 20px; /* Adjust heart size */
-    height: 20px; /* Adjust heart size */
+    width: 30px; /* Adjust heart size */
+    height: 30px; /* Adjust heart size */
     background-image: url("../images/heart.png"); /* Replace with your heart image */
     background-size: cover;
     animation: float 10s linear infinite; /* Adjust animation duration */
@@ -53,8 +53,8 @@ body {
     z-index: 2; /* Ensure it's above the hearts */
     opacity: 1; /* Initially visible */
     transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
-    width: 400px; /* Fixed width */
-    height: 100px; /* Fixed height */
+    width: 600px; /* Fixed width */
+    height: 200px; /* Fixed height */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Arrange items vertically */
     align-items: center; /* Center horizontally */
