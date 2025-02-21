@@ -25,9 +25,10 @@ const textBox = document.getElementById('text-box');
 const changingText = document.getElementById('changing-text');
 let currentTextIndex = 0;
 const textContents = [
-    "Happy Birthday, my special human!",
-    "May your day be magical!",
-    "Cheers to you and your joy!"
+    "Once upon a time, on this very day...",
+    "The universe decided the world needed a little more light,",
+    "A little more warmth, and a little more magic,",
+    "So it sent you."
 ];
 
 const catBox = document.getElementById('cat-box');

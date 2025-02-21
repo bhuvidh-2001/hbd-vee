@@ -1,7 +1,9 @@
 body {
     background-color: #E6E6FA; /* Lavender */
     overflow: hidden; /* Prevent scrollbars */
+    width: 100%; /* Use percentage-based width */
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -54,7 +56,7 @@ body {
     opacity: 1; /* Initially visible */
     transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
     width: 600px; /* Fixed width */
-    height: 200px; /* Fixed height */
+    height: 100px; /* Fixed height */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Arrange items vertically */
     align-items: center; /* Center horizontally */
@@ -74,7 +76,7 @@ body {
 
 #cat-box {
     width: 400px; /* Larger width for cat box */
-    height: 400px; /* Larger height for cat box */
+    height: 500px; /* Larger height for cat box */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,8 +84,9 @@ body {
 }
 
 .cat-image {
-    max-width: 90%; /* Cat image should not exceed box width */
-    max-height: 70%; /* Cat image should not exceed box height */
+    left: 40%;
+    max-width: 80%; /* Cat image should not exceed box width */
+    max-height: 60%; /* Cat image should not exceed box height */
 }
 
 .button-group {
