@@ -1,13 +1,13 @@
 body {
-    background-color: #E6E6FA; /* Lavender */
-    overflow: hidden; /* Prevent scrollbars */
-    width: 100%; /* Use percentage-based width */
+    background-color: #E6E6FA;
+    overflow: hidden; 
+    width: 100%; 
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
 }
 
 .heart-container {
@@ -16,29 +16,29 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Ensure hearts are on top */
-    pointer-events: none; /* Allow click-through */
+    z-index: 1; 
+    pointer-events: none; 
 }
 
 .heart {
     position: absolute;
-    width: 30px; /* Adjust heart size */
-    height: 30px; /* Adjust heart size */
-    background-image: url("../images/heart.png"); /* Replace with your heart image */
+    width: 30px; 
+    height: 30px; 
+    background-image: url("../images/heart.png"); 
     background-size: cover;
-    animation: float 10s linear infinite; /* Adjust animation duration */
+    animation: float 10s linear infinite; 
 }
 
 @keyframes float {
     0% {
-        transform: translateY(100vh); /* Start below the viewport */
+        transform: translateY(100vh); 
         opacity: 0;
     }
     25% {
         opacity: 1;
     }
     100% {
-        transform: translateY(-20vh); /* End above the viewport */
+        transform: translateY(-20vh); 
         opacity: 0;
     }
 }
@@ -48,35 +48,35 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fcdfe4; /* Light Pink */
+    background-color: #fcdfe4;
     padding: 20px;
     border-radius: 10px;
-    text-align: center; /* Center text within the box */
-    z-index: 2; /* Ensure it's above the hearts */
-    opacity: 1; /* Initially visible */
-    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
-    width: 600px; /* Fixed width */
-    height: 100px; /* Fixed height */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    text-align: center;
+    z-index: 2; 
+    opacity: 1; 
+    transition: opacity 0.5s ease-in-out;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
 }.center-box.hidden {
-    opacity: 0; /* Hidden state */
+    opacity: 0;
 }.sun-image {
-    width: 50px; /* Adjust sun image size */
+    width: 50px;
     height: 50px;
 }
 
 #changing-text {
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
-    font-size: 1.2em; /* Adjust font size as needed */
-    color: #800080; /* Example: Dark purple text color */
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.2em; 
+    color: #800080; 
 }
 
 #cat-box {
-    width: 400px; /* Larger width for cat box */
-    height: 500px; /* Larger height for cat box */
+    width: 400px; 
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,8 +85,8 @@ body {
 
 .cat-image {
     left: 40%;
-    max-width: 80%; /* Cat image should not exceed box width */
-    max-height: 60%; /* Cat image should not exceed box height */
+    max-width: 80%; 
+    max-height: 60%;
 }
 
 .button-group {
@@ -104,16 +104,16 @@ body {
 }
 
 #yes-button {
-    background-color: #90EE90; /* Light Green */
-    color: #006400; /* Dark Green */
+    background-color: #90EE90; 
+    color: #006400; 
 }
 
 #no-button {
-    background-color: #FFC0CB; /* Light Pink */
-    color: #800000; /* Maroon */
+    background-color: #FFC0CB; 
+    color: #800000; 
 }
 
-#cat-question { /* Style for the question text */
+#cat-question { 
     margin-bottom: 20px;
 }
 
