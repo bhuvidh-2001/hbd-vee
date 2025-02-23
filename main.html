@@ -15,40 +15,40 @@
 </style>
 </head>
 <body>
+  <audio id="backgroundMusic" src="music/Blue-Yung-Kai.mp3" loop></audio>
 <div class="paper heart">
 </div>
-<div class="paper">
-  <p>Never let the world turn you into something<br>ordinary—you were never meant to be.✨<br>Happy Birthday, Bellatrix!⚡
+<div class="paper image">
+  <p>Never let the world turn you into something<br>ordinary—you were never meant to be.✨</p>
+  <img src="images/4.JPG" />
+  <p>
+  <br>Happy Birthday, Bellatrix!⚡
   </p>
   </div>
-<div class="paper image">
+<div class="paper">
   <p>So here’s to another year of you being exactly<br>as brilliant as you are—because honestly,<br>why mess with perfection?
   </p>
-  <img src="images/4.JPG" />
-  </div>
-<div class="paper">
-  <p>You’re proof that intelligence and artistry<br>can exist effortlessly in one person.</p>
   </div>
 <div class="paper image">
   <p>You make ordinary moments feel<br>like they have a story worth telling.</p>
-  <img src="images/1.jpg" />
+  <img src="images/5.jpg" />
   </div>
+  <div class="paper">
+    <p>You’re proof that intelligence and artistry<br>can exist effortlessly in one person.</p>
+    </div>
 <div class="paper image">
   <p>Conversations with you feel like<br>unlocking a new perspective every time.</p>
-  <img src="images/3.jpg" />
+  <img src="images/6.jpg" />
   </div>
+  <div class="paper">
+    <p class="p1"> There’s something about the way you move through life,<br>like a spell that lingers even after it’s been cast.</p>
+    </div>
 <div class="paper image">
-  <p>You leave an impression,woven into<br>the very air like traces of magic after a duel.</p>
   <img src="images/2.jpg" />
+  <p>You leave an impression,woven into<br>the very air like traces of magic after a duel.</p>
 </div>
 <div class="paper">
-<p class="p1"> There’s something about the way you move through life,<br>like a spell that lingers even after it’s been cast.</p>
-</div>
-<div class="paper">
-<p class="p1">yours would be something rare—<br>unpredictable, a little chaotic, and always memorable.</p>
-</div>
-<div class="paper">
-<p class="p1">If birthdays were magical spells,<br>(Drag)</p>
+<p class="p1">If birthdays were magical potions,<br>yours would be a perfect mix—<br>unpredictable, a little chaotic, and always memorable.<br>(Drag)</p>
 </div>
 <script>
   function loadScript(src) {
@@ -66,6 +66,21 @@
   } else {
       loadScript("js/script_main.js");
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+              var music = document.getElementById('backgroundMusic');
+
+              function playMusic() {
+                  music.play().catch(function(error) {
+                      console.error('Autoplay was prevented:', error);
+                  });
+                  document.removeEventListener('click', playMusic);
+              }
+
+              document.addEventListener('click', playMusic);
+
+              music.volume = 0.1;
+          });
 </script>
 </body>
 </html>
